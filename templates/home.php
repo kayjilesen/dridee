@@ -35,22 +35,22 @@
 
 ?>
 
-<section id="intro" class="w-full relative h-[400px] lg:h-[60vh] top-0 flex items-center justify-center">
+<section id="intro" class="w-full mt-20 relative h-[400px] lg:h-[60vh] top-0 flex items-center justify-center overflow-hidden">
     <div class="container relative flex flex-col px-6 lg:px-0">
         <div class="relative z-[3] max-w-screen-lg flex flex-col items-center justify-center">
             <h1 class="text-2xl lg:text-5xl text-center font-bold text-white"><?php echo get_field('intro_title'); ?></h1>
             <div class="button-wrapper flex flex-row flex-wrap justify-center gap-3 mt-6">
-                <a href="<?php echo get_field('button_2_link'); ?>" class="button primary orange"><?php echo get_field('button_1_title'); ?></a>
+                <a href="<?php echo get_field('button_1_link'); ?>" class="button primary orange"><?php echo get_field('button_1_title'); ?></a>
                 <a href="<?php echo get_field('button_2_link'); ?>" class="button primary grey"><?php echo get_field('button_2_title'); ?></a>
             </div>
         </div>
     </div>
-    <div class="background-container z-[1]">
+    <div class="background-container z-[1] h-full">
         <?php if(!empty(get_field('intro_video'))) { ?>
-            <video loop="" muted="" playsinline="" autoplay="" poster="<?php echo get_field('hero_image')['url']; ?>" class="absolute z-[-1] top-1/2 left-1/2 h-auto w-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2">
+            <video loop="" muted="" playsinline="" autoplay="" poster="<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', false)[0]; ?>" class="absolute z-[-1] top-1/2 left-1/2 h-auto w-full min-w-full min-h-full object-cover -translate-x-1/2 -translate-y-1/2">
                 <source src="<?php echo get_field('intro_video'); ?>" type="video/mp4">
             </video>
-            <div class="gradient-overlay bg-gradient-radial from-black/30 to-black/70"></div>
+            <div class="gradient-overlay bg-gradient-to-r from-black/30 via-black/50 to-black/30 via-50%"></div>
         <?php } else { ?>
             <?php echo wp_get_attachment_image(get_post_thumbnail_id(), 'full', false); ?>
             <div class="gradient-overlay bg-gradient-to-r from-black/30 via-50% via-black/70 to-black/30"></div>

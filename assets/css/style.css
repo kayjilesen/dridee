@@ -1596,10 +1596,6 @@ video {
   position: sticky;
 }
 
-.bottom-0 {
-  bottom: 0px;
-}
-
 .left-0 {
   left: 0px;
 }
@@ -1652,6 +1648,10 @@ video {
   top: 1rem;
 }
 
+.z-\[-1\] {
+  z-index: -1;
+}
+
 .z-\[1\] {
   z-index: 1;
 }
@@ -1674,10 +1674,6 @@ video {
 
 .z-\[99\] {
   z-index: 99;
-}
-
-.z-\[-1\] {
-  z-index: -1;
 }
 
 .order-1 {
@@ -2006,10 +2002,6 @@ video {
   max-width: 24rem;
 }
 
-.max-w-xl {
-  max-width: 36rem;
-}
-
 .-translate-x-1\/2 {
   --tw-translate-x: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -2032,11 +2024,6 @@ video {
 
 .translate-x-full {
   --tw-translate-x: 100%;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-y-1\/2 {
-  --tw-translate-y: 50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2250,6 +2237,11 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.via-black\/50 {
+  --tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.5) var(--tw-gradient-via-position), var(--tw-gradient-to);
+}
+
 .via-black\/70 {
   --tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.7) var(--tw-gradient-via-position), var(--tw-gradient-to);
@@ -2261,10 +2253,6 @@ video {
 
 .to-black\/30 {
   --tw-gradient-to: rgb(0 0 0 / 0.3) var(--tw-gradient-to-position);
-}
-
-.to-black\/70 {
-  --tw-gradient-to: rgb(0 0 0 / 0.7) var(--tw-gradient-to-position);
 }
 
 .fill-white {
@@ -3131,10 +3119,6 @@ footer {
     height: 60vh;
   }
 
-  .lg\:min-h-screen {
-    min-height: 100vh;
-  }
-
   .lg\:w-1\/4 {
     width: 25%;
   }
@@ -3251,6 +3235,11 @@ footer {
     line-height: 2.5rem;
   }
 
+  .lg\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -3269,11 +3258,6 @@ footer {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
   }
 
   .lg\:leading-loose {
