@@ -1,0 +1,88 @@
+
+/* Form */
+.nf-form-content  {
+    @apply !pb-0;
+}
+body.boek form .ninja-forms-req-symbol {
+    @apply hidden;
+}
+body.boek form nf-field .nf-field-container {
+    @apply my-4;
+}
+form nf-field input {
+    @apply !rounded-full !border-0 font-bold !text-black placeholder:text-black;
+}
+form nf-field select {
+    @apply !rounded-full !border-0 font-bold !text-black;
+}
+form nf-field .list-select-wrap .nf-field-element {
+    @apply mt-4;
+}
+form nf-field .list-select-wrap .nf-field-element div {
+    @apply !border-0 rounded-lg;
+}
+form nf-field textarea {
+    @apply !h-[120px] !rounded-xl !border-0 font-bold !text-black;
+}
+form input[type=submit]{
+    @apply font-bold !py-4 !px-5 !mb-12 !h-auto !leading-none !text-white font-bold !bg-orange duration-300 hover:!text-black hover:!bg-[#ecf0f6] rounded-full;
+}
+form {
+    @apply font-sans;
+}
+form nf-field .nf-field-container {
+    @apply mb-0;
+}
+form .nf-form-fields-required {
+    @apply hidden;
+}
+form .field-wrap .nf-field-label {
+    @apply mb-0;
+}
+form .nf-form-content label {
+    @apply text-sm mb-0;
+}
+form .html-wrap p {
+    @apply text-xs italic -translate-y-1/2;
+}
+.nf-form-cont h3 {
+    @apply font-sans !text-orange font-bold;
+}
+.nf-error.field-wrap .nf-field-element:after {
+    @apply !bg-orange rounded-full !w-8 !h-8 !top-3 !right-3 flex items-center justify-center !text-sm;
+}
+.nf-error-msg, .nf-form-fields-required {
+    @apply text-xs italic font-sans !text-orange;
+}
+.nf-form-wrap .nf-response-msg {
+    @apply py-6 text-center;
+}
+
+
+sidebar {
+    @apply pointer-events-none fixed w-full h-screen overflow-hidden left-0 top-0 z-[999];
+}
+sidebar .inner-wrapper {
+    @apply translate-x-full duration-[1000ms] ease-in-out;
+}
+sidebar .nf-field-label {
+    @apply hidden;
+}
+sidebar nf-fields-wrap {
+    @apply flex flex-col gap-3;
+}
+body.booking sidebar#booking {
+    @apply pointer-events-auto;
+}
+body.booking sidebar#booking .inner-wrapper {
+    @apply translate-x-0;
+}
+sidebar .overlay {
+    @apply duration-[1000ms] ease-in-out;
+}
+body.booking sidebar#booking .overlay {
+    @apply opacity-50;
+}
+sidebar .close-form:hover svg {
+    @apply rotate-90;
+}

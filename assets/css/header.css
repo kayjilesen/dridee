@@ -1,0 +1,85 @@
+:is(html, body):not( > *.lg\:sticky) {
+    @apply overflow-x-hidden;
+}
+
+/* Menu */
+header {
+    @apply lg:py-4 top-0;
+}
+header .navbar-collapse {
+    transition: .3s;
+}
+header .navbar-collapse {
+    @apply translate-y-0
+}
+header .navbar-bar {
+    @apply bg-orange h-0.5 w-7 duration-300;
+}
+header .navbar-bar {
+    @apply duration-300;
+}
+header .navbar-collapse {
+    transition: .3s;
+}
+header .navbar-collapse {
+    @apply translate-y-0
+}
+header .nav-right .border-white {
+    @apply border-black;
+}
+
+header .nav-item.active a {
+    @apply bg-orange text-white;
+}
+
+/* Menu - Show */
+.show .navbar-collapse {
+    @apply translate-x-0
+}
+.show .navbar-bar.bar1 {
+    width: 32px;
+    transform-origin: center;
+    transform: rotate(-45deg);
+}
+.show .navbar-bar.bar2 {
+    @apply hidden;
+}
+.show .navbar-bar.bar3 {
+    width: 32px;
+    transform-origin: center;
+    transform: rotate(45deg);
+} 
+
+.show .navbar-wrapper-1 {
+    transform: translateY(9px);
+}
+.show .navbar-wrapper-3 {
+    transform: translateY(-9px);
+}
+
+@media (max-width: 1023px){
+    header .navbar-collapse {
+        @apply bg-white h-screen w-full px-12 py-12 overflow-y-scroll;
+        transform: translate(-100%, 0);
+    }
+    header .navbar-collapse .nav-item a {
+        @apply inline-block text-lg;
+    }
+    header .navbar-collapse {
+        @apply flex flex-col justify-center items-start;
+    }
+    header .navbar-collapse .nav-item h3:after {
+        width: 100%;
+    }
+    header.show img {
+    }
+}
+
+@media (max-width: 1023px) and (orientation: landscape){
+    header .navbar-collapse {
+        @apply items-center;
+    }
+    header .navbar-collapse .nav-item {
+        @apply py-3;
+    }
+}

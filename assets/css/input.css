@@ -1,0 +1,144 @@
+@import 'header.css';
+@import 'form.css';
+@import 'swiper.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+.text-wrapper p {
+	@apply my-4;
+}
+
+article h1 {
+    @apply text-3xl font-bold text-orange mb-8 mt-12;
+}
+article h3 {
+    @apply text-xl font-bold mb-4 mt-12;
+}
+article p {
+    @apply leading-normal mb-4;
+}
+article ol {
+    @apply list-decimal pl-4;
+}
+
+/* Proloog */
+#proloog p {
+    @apply my-6 leading-relaxed;
+}
+
+/* Shadow */
+.shadow-md {
+    box-shadow: 0px 12px 40px rgba(0,0,0,0.1) !important;
+}
+.hover\:shadow-md:hover {
+    box-shadow: 0px 12px 40px rgba(0,0,0,0.1) !important;
+}
+
+/* Container */
+footer {
+	@apply px-4 md:px-8 xl:px-0;
+}
+.container {
+    @apply max-w-full lg:max-w-screen-lg xl:max-w-[1100px] mx-auto;
+}
+.ctr-py {
+    @apply py-20 lg:py-32;
+}
+.ctr-pt {
+    @apply lg:pt-32;
+}
+
+/* Image Container / Overlay */
+.image-container {
+    @apply relative w-full pb-[100%] overflow-hidden;
+}
+.image-container.horizontal {
+    @apply pb-[56.25%];
+}
+.image-container.standing {
+    @apply pb-[140%];
+}
+.image-container.vertical {
+    @apply pb-[165%];
+}
+.image-container img {
+    @apply absolute w-full min-h-full object-cover top-[50%] -translate-y-[50%];
+}
+.image-overlay {
+    @apply h-full w-full top-0 left-0 absolute content-none bg-black;
+}
+.gradient-overlay {
+    @apply h-full w-full top-0 left-0 absolute content-none;
+}
+
+.background-container {
+    @apply absolute w-full h-full bg-black top-0 left-0;
+}
+.background-container img {
+    @apply absolute w-full min-h-full object-cover top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2;
+}
+
+/* Image Hover Animations */
+.image-container:hover img {
+    @apply scale-105;
+}
+
+/* Footer */
+.footer-col .item {
+	@apply font-thin mb-4 opacity-70 block text-center md:text-left;
+}
+
+.button {
+    @apply font-bold py-4 px-5 h-auto leading-none duration-300 hover:text-black hover:bg-[#ecf0f6] rounded-full;
+}
+.button.primary {
+    @apply hover:-translate-y-1;
+}
+.button.primary.orange {
+    @apply bg-orange text-white;
+}
+.button.primary.grey {
+    @apply bg-dark-gray text-white;
+}
+
+
+/* Content */
+.w-4 { width: 1rem; }
+.h-4 { height: 1rem; }
+.mr-2 { margin-right: .5rem; }
+.text-gray-400 { color: rgb(156 163 175); }
+
+
+/* Spreker */
+#spreker h2 {
+    @apply text-xl md:text-2xl text-dark-gray font-bold mb-4;
+}
+
+#spreker .content-my {
+    @apply my-16 lg:my-20;
+}
+#spreker .container {
+    @apply max-lg:px-4;
+}
+
+#spreker .subject-number {
+    @apply min-w-6 w-6 min-h-6 h-6 leading-[0] bg-orange text-white font-bold flex items-center justify-center rounded-full;
+}
+
+#spreker :is(.boek-col, .doelgroep-col, #boeken) {
+    @apply bg-orange/10 border-[2px] border-dashed border-orange rounded-[8px] p-4 text-sm font-bold;
+}
+#spreker :is(.onderwerp-col, .koets-col) {
+    @apply bg-dark-gray/5 border-[2px] border-dashed border-dark-gray/30 rounded-[8px] p-4 text-sm font-bold;
+}
+
+#spreker .sidebar-col ul {
+    @apply list-disc decoration-orange ml-5 flex flex-col gap-1;
+}

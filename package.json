@@ -1,0 +1,25 @@
+{
+    "name": "dridee",
+    "version": "1.0.0",
+    "description": "Dridee - Website",
+    "devDependencies": {
+      "autoprefixer": "^10.4.8",
+      "postcss": "^8.4.16"
+    },
+    "scripts": {
+      "build": "tailwindcss -i assets/css/input.css -o dist/css/style.css --minify",
+      "dev": "tailwindcss -i assets/css/input.css -o assets/css/style.css --watch"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/kayjilesen/dridee.git"
+    },
+    "author": "Kay Jilesen",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/kayjilesen/dridee/issues"
+    },
+    "dependencies": {
+      "tailwindcss": "^3.4.13"
+    }
+  }
